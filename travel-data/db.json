@@ -1,0 +1,193 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "vodien123@gmail.com",
+      "password": "12345",
+      "first_name": "Vo",
+      "last_name": "Dien",
+      "avatar": "https://reqres.in/img/faces/3-image.jpg"
+    },
+    {
+"id": 2,
+"email": "janet.weaver@reqres.in",
+"first_name": "Janet",
+"last_name": "Weaver",
+"avatar": "https://reqres.in/img/faces/2-image.jpg"
+},
+{
+"id": 3,
+"email": "emma.wong@reqres.in",
+"first_name": "Emma",
+"last_name": "Wong",
+"avatar": "https://reqres.in/img/faces/3-image.jpg"
+},
+{
+"id": 4,
+"email": "eve.holt@reqres.in",
+"first_name": "Eve",
+"last_name": "Holt",
+"avatar": "https://reqres.in/img/faces/4-image.jpg"
+},
+{
+"id": 5,
+"email": "charles.morris@reqres.in",
+"first_name": "Charles",
+"last_name": "Morris",
+"avatar": "https://reqres.in/img/faces/5-image.jpg"
+},
+{
+"id": 6,
+"email": "tracey.ramos@reqres.in",
+"first_name": "Tracey",
+"last_name": "Ramos",
+"avatar": "https://reqres.in/img/faces/6-image.jpg"
+}
+  ],
+  "rates": [
+    {
+      "id": 1,
+      "userid": 2,
+      "comment": "The historical sites we visited were fascinating and gave us a glimpse into the past",
+      "star": 5
+    },
+    {
+      "id": 2,
+      "userid": 3,
+      "comment": "The hiking trail was challenging but the stunning views made it all worth it.",
+      "star": 5
+    },
+    {
+      "id": 3,
+      "userid": 4,
+      "comment": "The tour guide was knowledgeable and gave us great insights into the local culture.",
+      "star": 5
+    },
+    {
+      "id": 4,
+      "userid": 5,
+      "comment": "The beach was absolutely stunning, with crystal clear water and powdery white sand.",
+      "star": 5
+    },
+    {
+      "id": 5,
+      "userid": 6,
+      "comment": "The hotel we stayed at was comfortable and had great amenities.",
+      "star": 5
+    }
+  ],
+  "questions": [
+    {
+      "email": "abc@gmail.com",
+      "createdAt": 1678127244444,
+      "updateAt": 1678127244444,
+      "id": 4
+    },
+    {
+      "email": "vodien@gmail.com",
+      "createdAt": 1678127670222,
+      "updateAt": 1678127670222,
+      "id": 5
+    },
+    {
+      "email": "aaaaaaaaaa@gmail.com",
+      "createdAt": 1678128524606,
+      "updateAt": 1678128524606,
+      "id": 6
+    },
+    {
+      "email": "uyen123@gmail.com",
+      "createdAt": 1678129075368,
+      "updateAt": 1678129075368,
+      "id": 7
+    },
+    {
+      "email": "abcde@gamil.com",
+      "id": 8
+    }
+  ],
+  "destination": [
+    {
+      "id": 1,
+      "name": "Pura TanahLot",
+      "location": "Bali, Indonesia",
+      "price": "$50.21",
+      "rating": 4.8,
+      "category": "Beach",
+      "imageURL": "https://theworldtravelguy.com/wp-content/uploads/2020/11/DJI_0943_1200.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Nusa Penida",
+      "location": "Bali, Indonesia",
+      "price": "$59.21",
+      "rating": 4.5,
+      "category": "Beach",
+      "imageURL": "https://i0.wp.com/girleatworld.net/wp-content/uploads/2018/04/nusa-penida-kelingking-1.jpg?fit=1400%2C1116&ssl=1"
+    },
+    {
+      "id": 3,
+      "name": "Komodo Island",
+      "location": "NTT, Indonesia",
+      "price": "$75.21",
+      "rating": 4.6,
+      "category": "Beach",
+      "imageURL": "https://static.saltinourhair.com/wp-content/uploads/2018/10/23125631/komodo-islands-flores.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Ubud",
+      "location": "Bali, Indonesia",
+      "price": "$45.21",
+      "rating": 4.8,
+      "category": "Nature",
+      "imageURL": "https://misstourist.com/wp-content/uploads/2019/12/jungle-villa-resort.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Power os Pisa",
+      "location": "Pisa, Italy",
+      "price": "$150.21",
+      "rating": 4.4,
+      "category": "Park",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKW1xAFgoHC7p-GN-YihRbgz9jthUoHJKRfKuKvM1zM__x3PU5_8X-NwV-7jKyeMAHJ1I&usqp=CAU"
+    },
+    {
+      "id": 6,
+      "name": "Zurich",
+      "location": "Switzerland",
+      "price": "$29.21",
+      "rating": 4.5,
+      "category": "Park",
+      "imageURL": "https://cdn.yeudulich.com/960x640/media/attraction/attraction/1d/4c/1fee-06b8-4bf5-ac74-b541a5f74517.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Borobudur Temple",
+      "location": "Bali, Indonesia",
+      "price": "$30.21",
+      "rating": 4.5,
+      "category": "Mountain",
+      "imageURL": "https://media.ex-cdn.com/EXP/media.vntravellive.com/files/news/2022/01/29/du-khach-phai-di-dep-dac-biet-tai-den-borobudur-113538.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Piazza Navona",
+      "location": "Rome, Italy",
+      "price": "$120.21",
+      "rating": 4.7,
+      "category": "Nature",
+      "imageURL": "https://a.cdn-hotels.com/gdcs/production196/d1197/c23db307-5e79-48d4-8066-9d8bffb92d35.jpg"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
