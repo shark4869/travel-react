@@ -1,0 +1,68 @@
+.rate {
+    .rate-header{
+        width: 400px;
+        .heading-sub {
+            text-transform: uppercase ;
+            font-size: 18px;
+            color: rgb(223, 136, 56);
+        }
+        .heading {
+            font-size: 36px;
+            font-weight: 600;
+        }
+        
+    }
+    .rate-list {
+        padding: 50px 0;
+        // display: grid;
+        // grid-template-columns: repeat(4, 1fr);
+        // gap: 30px 20px;
+        .react-multiple-carousel__arrow {
+            background: rgb(223, 136, 56);
+        }
+        .react-multiple-carousel__arrow--right {
+                top: 0;
+                right: calc(4% + 1px);
+            }
+        .react-multiple-carousel__arrow--left {
+            top: 0;
+            right: calc(10% + 1px);
+            left: unset;
+        }
+        .rate-item {
+            display: flex;
+            flex-direction: column;
+       
+            padding: 30px 15px;
+            height: 100%;
+            .rate-top{
+                .rate-icon {
+                    font-size: 24px;
+                    color: rgb(223, 136, 56);
+                }
+                .rate-content {
+                        padding-bottom: 15px;
+                    }
+            }
+            .rate-user {
+                margin-top: auto;
+                display: flex;
+                gap:  0 15px;
+                .user-avatar{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                }
+                .user-info {
+                    .user-name{
+
+                    }
+                    .rating{
+                        color: rgba(255, 255, 0, 0.6);
+                    }
+                }
+            }
+            }
+       
+    }
+}
