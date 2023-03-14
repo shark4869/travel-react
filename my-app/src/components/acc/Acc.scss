@@ -1,0 +1,60 @@
+.User {
+    .wrapper{
+        
+        .user-info {
+            width: 600px;
+            margin: 0 auto;
+            padding: 100px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .user-avatar {
+                width: 130px;
+                height: 130px;
+                border-radius: 50%;
+            }
+            .user-name {
+                font-size: 32px;
+                color: #000;
+                font-weight: 500;
+                margin: 15px 0;
+            }
+            .user-detail {
+                display: flex;
+                flex-direction: column;
+                gap: 20px 0;
+                padding-bottom: 30px;
+                .user-btn {
+                    width: 150px;
+                    margin: 0 auto;
+                }
+                .wrap-input {
+                    position: relative;
+                    width: 350px;
+                    .show-pass {
+                        position: absolute;
+                        top: 50%;
+                        right: 0;
+                        transform: translateY(-50%);
+                        font-size: 22px;
+                        cursor: pointer;
+                        color: rgb(223, 136, 56);
+                    }
+                }
+                .user-show {
+                    width: 350px;
+                    padding: 5px 10px;
+                    background-color: rgba($color: #000000, $alpha: 0.05);
+                }
+                .user-edit{
+                    padding: 10px 10px;
+                    font-family: inherit;
+                    width: 350px;
+                    height: 50px;
+                    border: none;
+                    border-bottom: 1px solid rgba($color: #000, $alpha: 0.3);
+                }
+            }
+        }
+    }
+}

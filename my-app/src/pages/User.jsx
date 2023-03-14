@@ -1,17 +1,16 @@
 import React from "react";
-import { connect } from "react-redux";
-class Account extends React.Component {
+import Acc from "../components/acc/Acc";
+import Footer from "../components/footer/footer";
+class User extends React.Component {
     render () {
-        let { isLogin, user }=this.props;
         return (
-            <h1>Helle {user.first_name} {user.last_name}</h1>
+            <>
+                <Acc />
+                <Footer/>
+            </>
+            
         )
     }
 }
-const mapStateToProps = (state) => {
-    return {
-        isLogin: state.user.isLogin,
-        user: state.user.user,
-    }
-}
-export default connect(mapStateToProps)(Account);
+
+export default User;

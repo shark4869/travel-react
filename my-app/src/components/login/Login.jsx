@@ -54,7 +54,7 @@ class Login extends React.Component {
                         </span>
                         <div className="form-header">
                             <h2>Login</h2>
-                            <h2>Resister</h2>
+                            <h2>Register</h2>
                         </div>
                         
                         <form action="" onSubmit={this.handleLogin} className="form" >

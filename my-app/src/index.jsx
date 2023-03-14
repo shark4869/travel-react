@@ -12,7 +12,7 @@ import rootReducer from './store/reduces/rootReducer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Destination from './pages/Destination';
-import Account from './pages/User';
+import User from './pages/User';
 import App from './App.jsx';
 
 const enhancers = compose(
@@ -32,7 +32,7 @@ root.render(
             <Route path="/" element={<App />} >
                 <Route path="about" element={<About />} />
                 <Route path="destination" element={<Destination />} />
-                <Route path="/users/:id" element={<Account />} />
+                <Route path="users/:id" element={<User />} />
             </Route>
             <Route index element={<Home />} />
           </Routes>

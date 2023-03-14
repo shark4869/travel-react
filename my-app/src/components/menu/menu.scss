@@ -3,7 +3,22 @@
     align-items: center;
     justify-content: space-between;
     height: 80px;
-    color: #000;
+ 
+    color: #fff;
+    .theme-tongle {
+        font-size: 24px;
+        line-height: 1;
+        background-color: transparent;
+        border: none;
+        
+        cursor: pointer;
+    }
+    .dark {
+color: #000;
+    }
+    .light {
+        color: #fff;
+    }
     .logo {
         font-size: 36px;
         font-weight: 600;
@@ -27,7 +42,7 @@
                 width: 0%;
                 content: '';
                 color: transparent;
-                background: #000;
+                background: #fff;
                 height: 2px;
             }
             &:hover::after {
@@ -44,7 +59,7 @@
                 width: 50%;
                 content: '';
                 color: transparent;
-                background: #000;
+                background: #fff;
                 height: 2px;
         }
     }
@@ -58,7 +73,7 @@
                 font-size: 32px;
                 line-height: 1;
                 &:hover {
-                    color: rgb(223, 136, 56);
+                    color: #EB6440;
                     cursor: pointer;
                 }
             }
@@ -76,6 +91,7 @@
         
         .header-login {
             background-color: transparent;
+            color: #fff;
         }
         .header-register {
             background-color: rgb(223, 136, 56);

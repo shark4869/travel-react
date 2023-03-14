@@ -1,4 +1,4 @@
-import { LOGIN_REQUEST, LOGIN_SUCCESS, LOGIN_FAILURE, LOGOUT } from "../actions/actionType";
+import { LOGIN_REQUEST, LOGIN_SUCCESS, LOGIN_FAILURE, LOGOUT,UPDATE_SUCCESS, UPDATE_FAILURE  } from "../actions/actionType";
 const initialState ={
     isLoading: false,
     isLogin: false,
@@ -12,7 +12,13 @@ const userReducer = ( state = initialState, action) => {
         case LOGIN_SUCCESS: 
             return {...state, isLoading: false, isLogin: true, user: action.payload, error: null};
         case LOGIN_FAILURE:
-            return {...state, isLoading: false, isLogin: false, user: null, error: action.payload};
+            return {...state,  isLoading: false, isLogin: false, user: null, error: action.payload};
+        case UPDATE_SUCCESS:
+        return {
+            ...state, isLoading: false, isLogin: true, user: action.payload, error: null };
+        case UPDATE_FAILURE:
+        return {
+            ...state, error: action.payload  };
         case LOGOUT:
             return {...initialState};
         default:
