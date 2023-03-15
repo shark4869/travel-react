@@ -3,9 +3,6 @@ import { Navigate } from "react-router-dom";
 import { Link, NavLink  } from 'react-router-dom';
 import Login from "../login/Login";
 import { connect } from "react-redux";
-import { TOGGLE_THEME } from "../../store/actions/actionType";
-import { BsSunFill } from "react-icons/bs";
-import { BsMoonFill } from "react-icons/bs";
 import { FaShoppingCart } from "react-icons/fa";
 import { MdLogout } from "react-icons/md";
 import { logOut } from "../../store/actions/userActions";
@@ -42,7 +39,7 @@ class Menu extends React.Component {
     }
     render() {
         let { isOpenLogin, navigate  }=this.state;
-        let { isLogin, user, darkMode }=this.props;
+        let { isLogin, user }=this.props;
         // console.log('check user: ',user);
         if (navigate) {
         return <Navigate to="/" />;
@@ -67,9 +64,7 @@ class Menu extends React.Component {
                         <NavLink to="about">About</NavLink> 
                     </li>
                 </ul>
-                 <button className={darkMode ? "theme-tongle dark" : "theme-tongle light"} onClick={() => this.handleClick()}> 
-                {darkMode ? <BsMoonFill/> : <BsSunFill/>}
-                </button>
+                
                 {user ? 
                 <div className="header-auth">
                         <Link to={`/users/${user.id}`}>
@@ -104,13 +99,11 @@ const mapStateToProps = (state) => {
     return {
         isLogin: state.user.isLogin,
         user: state.user.user,
-        darkMode: state.theme.darkMode,
     }
 }
 const mapDispathToProps = (dispatch) => {
     return {
         logOut: () => dispatch(logOut()),
-        toggleTheme: () => dispatch({ type: TOGGLE_THEME, reducer: 'theme', }),
     }
 }
 export default connect(mapStateToProps, mapDispathToProps)(Menu);
