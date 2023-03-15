@@ -67,6 +67,7 @@ class Login extends React.Component {
                                     autoComplete="off"
                                     placeholder="Email"
                                     onChange={(event)=>this.handleInputChange(event)} className="input-content"
+                                    autoFocus
                                     />
                             </div>
                             <div className="form-group">

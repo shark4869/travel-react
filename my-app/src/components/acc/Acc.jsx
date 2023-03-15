@@ -32,7 +32,7 @@ class Account extends React.Component {
     handleUpdateSubmit = (event) => {
         event.preventDefault();
         const userData = {
-            avatar: this.props.user.avatar,
+            // avatar: this.props.user.avatar,
             first_name: this.state.first_name,
             last_name: this.state.last_name,
             email: this.state.email,
@@ -60,7 +60,7 @@ class Account extends React.Component {
                                 {isClick ? 
                                     <form action="" onSubmit={this.handleUpdateSubmit} className="user-detail">
                                         <input className="user-edit" name="first_name" type="text" value={first_name}
-                                        onChange={(event)=>this.handleInputChange(event)}
+                                        onChange={(event)=>this.handleInputChange(event)} autoFocus
                                         />
                                         <input className="user-edit" name="last_name" type="text" value={last_name} 
                                         onChange={(event)=>this.handleInputChange(event)}

@@ -47,7 +47,7 @@ export const loginUser = (userData) => (dispath) => {
 export const updateUser = (id, userData) => {
   return dispatch => {
     axios
-      .put(`http://localhost:3000/api/users/${id}`, userData)
+      .patch(`http://localhost:3000/api/users/${id}`, userData)
       .then(response => {
         dispatch(updateSuccess(response.data));
         console.log('check success: ', response.data);

@@ -1,12 +1,21 @@
 import React from "react";
-import Menu from "../components/menu/menu";
+import Footer from "../components/footer/footer";
 class About extends React.Component {
     render () {
         return (
-         
-                     <h1>About page</h1>
-                
-           
+            <>
+            <section className="About">
+                    <div className="wrapper">
+                        <div className="container">
+                            <div className="about-content" style={{height: "100vh", paddingTop: "50px"}}>
+                                <p>This project is an exercise in react and redux</p>
+                            </div>
+
+                        </div>
+                    </div>
+            </section>  
+            <Footer />
+            </>
         )
     }
 }
