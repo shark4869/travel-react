@@ -1,23 +1,22 @@
 import React from "react";
-import axios from "axios";
+import { connect } from "react-redux";
+import { Link } from 'react-router-dom';
 import { FaStar } from "react-icons/fa";
 import { FaMapMarkerAlt } from "react-icons/fa";
+import { fetchTours } from "../../store/actions/tourAction"
+import "./ListTour.scss";
+
 class ListTour extends React.Component {
     state = {
-        listTours: [],
         filterListTours: [],
         isClick: false,
         activeButton: "All"
     }
-    async componentDidMount () {
-        let res =await axios.get("http://localhost:3000/api/destination");
-        // console.log('check listtour: ', res.data);
-        this.setState({
-            listTours: res && res.data ? res.data : []
-        })
+    componentDidMount () {
+        this.props.fetchTours();
     }
     handlerTourRecommend = () => {
-        let listToursRecommend = this.state.listTours.filter(item => item.rating > 4.5);
+        let listToursRecommend = this.props.listTour.filter(item => item.rating > 4.5);
         
         this.setState({
             filterListTours: listToursRecommend,
@@ -28,9 +27,9 @@ class ListTour extends React.Component {
     handlerFilterListTours = (category) => {
         let filteredTour = [];
         if (category === 'All') {
-        filteredTour = this.state.listTours;
+        filteredTour = this.props.listTour;
         } else {
-        filteredTour = this.state.listTours.filter(
+        filteredTour = this.props.listTour.filter(
             (item) => item.category === category
         );
         }
@@ -41,9 +40,11 @@ class ListTour extends React.Component {
          });
     }
     render () {
-        let { listTours, filterListTours, isClick, activeButton }=this.state;
+        let {listTour} = this.props;
+        // console.log("checkProp:", listTour)
+        let { filterListTours, isClick, activeButton }=this.state;
         filterListTours.sort((a, b) => b.rating - a.rating);
-        listTours.sort((a, b) => b.rating - a.rating);
+        listTour.sort((a, b) => b.rating - a.rating);
         let locationIcon = <FaMapMarkerAlt />;
         let startIcon = <FaStar />;
         
@@ -82,7 +83,8 @@ class ListTour extends React.Component {
                             backgroundPosition: 'center'
                         };
                         return(
-                                <div className='tour-item' style={styles} key={item.id} >
+                                 <Link to={`/destination/${item.id}`}>
+                                    <div className='tour-item' style={styles} key={item.id} >
                                     <h3 className='tour-name'>{item.name}</h3>
                                     <div className='tour-desc'>
                                         <p className='tour-location'>
@@ -96,19 +98,23 @@ class ListTour extends React.Component {
                                         {item.rating}
                                     </div>
                                 </div>
+                                 </Link>
+
+                                
                         )
                         }) }
                 </div>
                 :
                 <div className='tour-list'>
-                   {listTours && listTours.length > 0 && listTours.map((item,index)=>{
+                   {listTour && listTour.length > 0 && listTour.map((item,index)=>{
                         const styles = {
                             backgroundImage: `url(${item.imageURL})`,
                             backgroundSize: 'cover',
                             backgroundPosition: 'center'
                         };
                         return(
-                                 <div className='tour-item' style={styles} key={item.id} >
+                                 <Link to={`/destination/${item.id}`}  key={item.id} >
+                                 <div className='tour-item' style={styles} >
                                     <h3 className='tour-name'>{item.name}</h3>
                                     <div className='tour-desc'>
                                         <p className='tour-location'>
@@ -121,7 +127,8 @@ class ListTour extends React.Component {
                                         <span className='rating-icon'>{startIcon}</span>    
                                         {item.rating}
                                     </div>
-                            </div>
+                                </div>
+                                 </Link>
                         )
                         }) }
                 </div>
@@ -132,5 +139,14 @@ class ListTour extends React.Component {
         )
     }
 }
-
-export default ListTour;
+const mapStateToProps = (state) => {
+    return {
+        listTour: state.tours.listTour,
+    }
+}
+const mapDispathToProps = (dispatch) => {
+    return {
+        fetchTours: () => dispatch(fetchTours()),
+    }
+}
+export default connect(mapStateToProps, mapDispathToProps)(ListTour);

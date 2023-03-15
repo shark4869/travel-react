@@ -13,6 +13,8 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Destination from './pages/Destination';
 import User from './pages/User';
+import TourDetail from './pages/tourDetail';
+
 import App from './App.jsx';
 
 const enhancers = compose(
@@ -33,6 +35,7 @@ root.render(
                 <Route path="about" element={<About />} />
                 <Route path="destination" element={<Destination />} />
                 <Route path="users/:id" element={<User />} />
+                <Route path="destination/:id" element={<TourDetail />}  />
             </Route>
             <Route index element={<Home />} />
           </Routes>
